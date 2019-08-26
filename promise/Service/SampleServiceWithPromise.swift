@@ -72,7 +72,7 @@ extension SampleServiceWithPromise {
             DispatchQueue.global(qos: .default).asyncAfter(deadline: .now() + .seconds(delay)) {
                 print("async_step1 completed")
                 if randomResult {
-                    Util.randomBool() ? resolver.fulfill(true) : resolver.reject(Step1Errors.randomElement() ?? Step1Error.unknown)
+                    Util.randomBool() ? resolver.fulfill(Util.randomBool()) : resolver.reject(Step1Errors.randomElement() ?? Step1Error.unknown)
                 } else {
                     resolver.fulfill(true)
                 }
@@ -87,7 +87,7 @@ extension SampleServiceWithPromise {
             DispatchQueue.global(qos: .background).asyncAfter(deadline: .now() + .seconds(delay)) {
                 print("async_step2 completed")
                 if randomResult {
-                    Util.randomBool() ? resolver.fulfill(true) : resolver.reject(Step2Errors.randomElement() ?? Step2Error.unknown)
+                    Util.randomBool() ? resolver.fulfill(Util.randomBool()) : resolver.reject(Step2Errors.randomElement() ?? Step2Error.unknown)
                 } else {
                     resolver.fulfill(true)
                 }
@@ -103,10 +103,19 @@ extension SampleServiceWithPromise {
             DispatchQueue.global(qos: .background).asyncAfter(deadline: .now() + .seconds(delay)) {
                 print("async_step3 completed")
                 if randomResult {
-                    Util.randomBool() ? resolver.fulfill(true) : resolver.reject(Step3Errors.randomElement() ?? Step3Error.unknown)
+                    Util.randomBool() ? resolver.fulfill(Util.randomBool()) : resolver.reject(Step3Errors.randomElement() ?? Step3Error.unknown)
                 } else {
                     resolver.fulfill(true)
                 }
+            }
+        }
+    }
+
+    func async_stepWithError_adv()-> Promise<Bool>  {
+        return Promise<Bool>() { resolver in
+            DispatchQueue.global(qos: .background).asyncAfter(deadline: .now() + .seconds(Util.randomDelay())) {
+                print("async_error")
+                resolver.reject(GenericError.genericError)
             }
         }
     }
