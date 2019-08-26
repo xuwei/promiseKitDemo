@@ -16,6 +16,7 @@
 		962CAE862312A84A00DE8D90 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 962CAE842312A84A00DE8D90 /* LaunchScreen.storyboard */; };
 		962CAE912312A84A00DE8D90 /* promiseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962CAE902312A84A00DE8D90 /* promiseTests.swift */; };
 		962CAE9D2312A91200DE8D90 /* SampleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962CAE9C2312A91200DE8D90 /* SampleService.swift */; };
+		967DA0832313DD8D00E3B829 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967DA0822313DD8D00E3B829 /* Util.swift */; };
 		96A968E62312B66100445BBF /* SampleServiceWithPromise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A968E52312B66100445BBF /* SampleServiceWithPromise.swift */; };
 		96A968E82312BB9B00445BBF /* callbackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A968E72312BB9B00445BBF /* callbackTests.swift */; };
 		96A968EA2312BFCF00445BBF /* groupTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A968E92312BFCF00445BBF /* groupTests.swift */; };
@@ -47,6 +48,7 @@
 		962CAE902312A84A00DE8D90 /* promiseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = promiseTests.swift; sourceTree = "<group>"; };
 		962CAE922312A84A00DE8D90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		962CAE9C2312A91200DE8D90 /* SampleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleService.swift; sourceTree = "<group>"; };
+		967DA0822313DD8D00E3B829 /* Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
 		96A968E52312B66100445BBF /* SampleServiceWithPromise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleServiceWithPromise.swift; sourceTree = "<group>"; };
 		96A968E72312BB9B00445BBF /* callbackTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = callbackTests.swift; sourceTree = "<group>"; };
 		96A968E92312BFCF00445BBF /* groupTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = groupTests.swift; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 			children = (
 				962CAE9C2312A91200DE8D90 /* SampleService.swift */,
 				96A968E52312B66100445BBF /* SampleServiceWithPromise.swift */,
+				967DA0822313DD8D00E3B829 /* Util.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -321,6 +324,7 @@
 			files = (
 				962CAE7E2312A84600DE8D90 /* ViewController.swift in Sources */,
 				962CAE7C2312A84600DE8D90 /* AppDelegate.swift in Sources */,
+				967DA0832313DD8D00E3B829 /* Util.swift in Sources */,
 				962CAE9D2312A91200DE8D90 /* SampleService.swift in Sources */,
 				96A968E62312B66100445BBF /* SampleServiceWithPromise.swift in Sources */,
 			);

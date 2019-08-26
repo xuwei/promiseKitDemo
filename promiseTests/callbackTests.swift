@@ -29,6 +29,7 @@ class callbackTests: XCTestCase {
                 }
             }
         }
+        wait(for: [expectation], timeout: 10.0)
     }
 
     func testClosureNestingWithErr() {
@@ -54,6 +55,7 @@ class callbackTests: XCTestCase {
                 }
             }
         }
+        wait(for: [expectation], timeout: 10.0)
     }
 
     // demo of callback hell
@@ -92,5 +94,6 @@ class callbackTests: XCTestCase {
                 expectation.fulfill()
             }
         }
+        wait(for: [expectation], timeout: 10.0)
     }
 }

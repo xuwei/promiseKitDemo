@@ -20,7 +20,7 @@ class variationTests: XCTestCase {
         }.then { data->Promise<Int> in
             XCTAssertNotNil(data)
             XCTAssertTrue(data == true)
-            return sharedServiceWithPromise.async_step4()
+            return sharedServiceWithPromise.async_step4(data)
         }.done { data in
             XCTAssertNotNil(data)
             XCTAssertTrue(data == 100)
@@ -29,6 +29,7 @@ class variationTests: XCTestCase {
         }.finally {
             expectation.fulfill()
         }
+        wait(for: [expectation], timeout: 10.0)
     }
 
     func testTransitio2() {

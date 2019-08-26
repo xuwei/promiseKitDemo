@@ -43,7 +43,7 @@ struct SampleService {
     func async_step1 (random: Bool, complete: @escaping (Result<Bool, Error>)-> Void) {
         print("async_step1")
         if random {
-            Int.random(in: 0..<10) % 2 == 0 ? complete(.success(true)) : complete(.failure(Step1Errors.randomElement() ?? Step1Error.step1Error1))
+            Util.randomBool() ? complete(.success(true)) : complete(.failure(Step1Errors.randomElement() ?? Step1Error.step1Error1))
         } else {
             complete(.success(true))
         }
@@ -52,7 +52,7 @@ struct SampleService {
     func async_step2 (random: Bool, complete: @escaping (Result<Bool, Error>)-> Void) {
         print("async_step2")
         if random {
-            Int.random(in: 0..<10) % 2 == 0 ? complete(.success(true)) : complete(.failure(Step2Errors.randomElement() ?? Step2Error.step2Error1))
+            Util.randomBool() ? complete(.success(true)) : complete(.failure(Step2Errors.randomElement() ?? Step2Error.step2Error1))
         } else {
             complete(.success(true))
         }
@@ -61,7 +61,7 @@ struct SampleService {
     func async_step3 (random: Bool, complete: @escaping (Result<Bool, Error>)-> Void) {
         print("async_step3")
         if random {
-            Int.random(in: 0..<10) % 2 == 0 ? complete(.success(true)) : complete(.failure(Step3Errors.randomElement() ?? Step3Error.step3Error1))
+            Util.randomBool() ? complete(.success(true)) : complete(.failure(Step3Errors.randomElement() ?? Step3Error.step3Error1))
         } else {
             complete(.success(true))
         }

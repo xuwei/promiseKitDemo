@@ -35,10 +35,10 @@ class promiseTests: XCTestCase {
     // promise version
     func testPromiseChaining() {
         let expectation = XCTestExpectation(description: "success is expected")
-        sharedServiceWithPromise.async_step1(random: true).then { _ in
-            sharedServiceWithPromise.async_step2(random: true)
+        sharedServiceWithPromise.async_step1(random: false).then { _ in
+            sharedServiceWithPromise.async_step2(random: false)
         }.then { _ in
-            sharedServiceWithPromise.async_step3(random: true)
+            sharedServiceWithPromise.async_step3(random: false)
         }.done { data in
             XCTAssertNotNil(data)
             XCTAssertTrue(data)
@@ -47,6 +47,7 @@ class promiseTests: XCTestCase {
         }.finally {
             expectation.fulfill()
         }
+        wait(for: [expectation], timeout: 10.0)
     }
 
 //    func testClosureNestingWithErr() {
@@ -90,6 +91,7 @@ class promiseTests: XCTestCase {
         }.finally {
             expectation.fulfill()
         }
+        wait(for: [expectation], timeout: 10.0)
     }
 
 
@@ -151,5 +153,6 @@ class promiseTests: XCTestCase {
             }.finally {
                 expectation.fulfill()
         }
+        wait(for: [expectation], timeout: 10.0)
     }
 }

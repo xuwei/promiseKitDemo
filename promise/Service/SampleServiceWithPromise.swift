@@ -16,51 +16,98 @@ struct SampleServiceWithPromise {
 
     func async_step1(random: Bool)-> Promise<Bool> {
         print("async_step1")
-        return Promise<Bool>() { seal in
-
-            let decision = decisions.randomElement() ?? true
+        return Promise<Bool>() { resolver in
             if random {
-                decision ? seal.fulfill(true) : seal.reject(Step1Errors.randomElement() ?? Step1Error.unknown)
+                Util.randomBool() ? resolver.fulfill(true) : resolver.reject(Step1Errors.randomElement() ?? Step1Error.unknown)
             } else {
-                seal.fulfill(true)
+                resolver.fulfill(true)
             }
         }
     }
 
     func async_step2(random: Bool)-> Promise<Bool>  {
         print("async_step2")
-        return Promise<Bool>() { seal in
-            let decision = decisions.randomElement() ?? true
+        return Promise<Bool>() { resolver in
             if random {
-                decision ? seal.fulfill(true) : seal.reject(Step2Errors.randomElement() ?? Step2Error.unknown)
+                Util.randomBool() ? resolver.fulfill(true) : resolver.reject(Step2Errors.randomElement() ?? Step2Error.unknown)
             } else {
-                seal.fulfill(true)
+                resolver.fulfill(true)
             }
         }
     }
 
     func async_step3(random: Bool)-> Promise<Bool>  {
         print("async_step3")
-        return Promise<Bool>() { seal in
-            let decision = decisions.randomElement() ?? true
+        return Promise<Bool>() { resolver in
             if random {
-                decision ? seal.fulfill(true) : seal.reject(Step3Errors.randomElement() ?? Step3Error.unknown)
+                Util.randomBool() ? resolver.fulfill(true) : resolver.reject(Step3Errors.randomElement() ?? Step3Error.unknown)
             } else {
-                seal.fulfill(true)
+                resolver.fulfill(true)
             }
         }
     }
 
     func async_stepWithError()-> Promise<Bool>  {
-        return Promise<Bool>() { seal in
+        return Promise<Bool>() { resolver in
             print("async_error")
-            seal.reject(GenericError.genericError)
+            resolver.reject(GenericError.genericError)
         }
     }
 
-    func async_step4()-> Promise<Int> {
-        return Promise<Int>() { seal in
-            seal.fulfill(100)
+    // taking data as parameter for demo purpose of data transformation
+    func async_step4(_ data: Bool)-> Promise<Int> {
+        return Promise<Int>() { resolver in
+            resolver.fulfill(100)
+        }
+    }
+}
+
+//MARK: for advanced demo
+extension SampleServiceWithPromise {
+
+    func async_step1_adv(randomResult: Bool, randomDelay: Bool)-> Promise<Bool> {
+        print("async_step1")
+        return Promise<Bool>() { resolver in
+            let delay = randomDelay ? Util.randomDelay() : 0
+            DispatchQueue.global(qos: .default).asyncAfter(deadline: .now() + .seconds(delay)) {
+                print("async_step1 completed")
+                if randomResult {
+                    Util.randomBool() ? resolver.fulfill(true) : resolver.reject(Step1Errors.randomElement() ?? Step1Error.unknown)
+                } else {
+                    resolver.fulfill(true)
+                }
+            }
+        }
+    }
+
+    func async_step2_adv(randomResult: Bool, randomDelay: Bool)-> Promise<Bool>  {
+        print("async_step2")
+        return Promise<Bool>() { resolver in
+            let delay = randomDelay ? Util.randomDelay() : 0
+            DispatchQueue.global(qos: .background).asyncAfter(deadline: .now() + .seconds(delay)) {
+                print("async_step2 completed")
+                if randomResult {
+                    Util.randomBool() ? resolver.fulfill(true) : resolver.reject(Step2Errors.randomElement() ?? Step2Error.unknown)
+                } else {
+                    resolver.fulfill(true)
+                }
+            }
+        }
+    }
+
+    func async_step3_adv(randomResult: Bool, randomDelay: Bool)-> Promise<Bool>  {
+        print("async_step3")
+
+        return Promise<Bool>() { resolver in
+            let delay = randomDelay ? Util.randomDelay() : 0
+            DispatchQueue.global(qos: .background).asyncAfter(deadline: .now() + .seconds(delay)) {
+                print("async_step3 completed")
+                if randomResult {
+                    Util.randomBool() ? resolver.fulfill(true) : resolver.reject(Step3Errors.randomElement() ?? Step3Error.unknown)
+                } else {
+                    resolver.fulfill(true)
+                }
+            }
         }
     }
 }
