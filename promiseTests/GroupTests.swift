@@ -11,7 +11,7 @@ import PromiseKit
 @testable import promise
 
 // Testing waiting for a group api calls to finish
-class groupTests: XCTestCase {
+class GroupTests: XCTestCase {
 
     // using "when resolved" which doesn't catch errors, this is only useful for callbacks with no error handling
     func testGroup1() {
@@ -24,7 +24,7 @@ class groupTests: XCTestCase {
             print("all resolved!")
             expectation.fulfill()
         }
-        wait(for: [expectation], timeout: 10.0)
+        wait(for: [expectation], timeout: TestConstants.timeout)
     }
 
     // "when fulfilled" is more practical, but promise signature must be same
@@ -43,7 +43,7 @@ class groupTests: XCTestCase {
         }.finally {
             expectation.fulfill()
         }
-        wait(for: [expectation], timeout: 10.0)
+        wait(for: [expectation], timeout: TestConstants.timeout)
     }
 
     // catching error amongst group
@@ -61,7 +61,7 @@ class groupTests: XCTestCase {
         }.finally {
             expectation.fulfill()
         }
-        wait(for: [expectation], timeout: 10.0)
+        wait(for: [expectation], timeout: TestConstants.timeout)
     }
 
     // handling random conditions
@@ -78,7 +78,7 @@ class groupTests: XCTestCase {
         }.finally {
             expectation.fulfill()
         }
-        wait(for: [expectation], timeout: 10.0)
+        wait(for: [expectation], timeout: TestConstants.timeout)
     }
 
     // handling diff Promise signatures
@@ -95,7 +95,7 @@ class groupTests: XCTestCase {
         }.finally {
             expectation.fulfill()
         }
-        wait(for: [expectation], timeout: 10.0)
+        wait(for: [expectation], timeout: TestConstants.timeout)
     }
 
     // handling diff Promise signatures and has error
@@ -112,6 +112,6 @@ class groupTests: XCTestCase {
         }.finally {
             expectation.fulfill()
         }
-        wait(for: [expectation], timeout: 10.0)
+        wait(for: [expectation], timeout: TestConstants.timeout)
     }
 }

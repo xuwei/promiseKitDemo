@@ -11,7 +11,7 @@ import PromiseKit
 @testable import promise
 
 // testing transition of promise 
-class transtionTests: XCTestCase {
+class TranstionTests: XCTestCase {
 
     func testTransition1() {
         let expectation = XCTestExpectation(description: "testing transition of promise type")
@@ -29,7 +29,7 @@ class transtionTests: XCTestCase {
         }.finally {
             expectation.fulfill()
         }
-        wait(for: [expectation], timeout: 10.0)
+        wait(for: [expectation], timeout: TestConstants.timeout)
     }
 
     func testTransitio2() {

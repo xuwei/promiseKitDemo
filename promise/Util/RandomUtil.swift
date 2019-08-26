@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Util {
+class RandomUtil {
     class func randomBool()-> Bool {
         return [true,false].randomElement() ?? true
     }

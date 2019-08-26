@@ -9,7 +9,7 @@
 import XCTest
 @testable import promise
 
-class callbackTests: XCTestCase {
+class CallbackTests: XCTestCase {
 
     // closure version
     func testClosureNesting() {
@@ -29,7 +29,7 @@ class callbackTests: XCTestCase {
                 }
             }
         }
-        wait(for: [expectation], timeout: 10.0)
+        wait(for: [expectation], timeout: TestConstants.timeout)
     }
 
     func testClosureNestingWithErr() {
@@ -55,7 +55,7 @@ class callbackTests: XCTestCase {
                 }
             }
         }
-        wait(for: [expectation], timeout: 10.0)
+        wait(for: [expectation], timeout: TestConstants.timeout)
     }
 
     // demo of callback hell
@@ -94,6 +94,6 @@ class callbackTests: XCTestCase {
                 expectation.fulfill()
             }
         }
-        wait(for: [expectation], timeout: 10.0)
+        wait(for: [expectation], timeout: TestConstants.timeout)
     }
 }
