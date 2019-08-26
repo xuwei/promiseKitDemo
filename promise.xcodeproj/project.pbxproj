@@ -20,7 +20,7 @@
 		96A968E62312B66100445BBF /* SampleServiceWithPromise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A968E52312B66100445BBF /* SampleServiceWithPromise.swift */; };
 		96A968E82312BB9B00445BBF /* callbackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A968E72312BB9B00445BBF /* callbackTests.swift */; };
 		96A968EA2312BFCF00445BBF /* groupTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A968E92312BFCF00445BBF /* groupTests.swift */; };
-		96A968EC2312C00100445BBF /* variationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A968EB2312C00100445BBF /* variationTests.swift */; };
+		96A968EC2312C00100445BBF /* transtionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A968EB2312C00100445BBF /* transtionTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,7 +52,7 @@
 		96A968E52312B66100445BBF /* SampleServiceWithPromise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleServiceWithPromise.swift; sourceTree = "<group>"; };
 		96A968E72312BB9B00445BBF /* callbackTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = callbackTests.swift; sourceTree = "<group>"; };
 		96A968E92312BFCF00445BBF /* groupTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = groupTests.swift; sourceTree = "<group>"; };
-		96A968EB2312C00100445BBF /* variationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = variationTests.swift; sourceTree = "<group>"; };
+		96A968EB2312C00100445BBF /* transtionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = transtionTests.swift; sourceTree = "<group>"; };
 		BFA29BCA59C1EA99983B66BD /* Pods-promiseTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-promiseTests.debug.xcconfig"; path = "Target Support Files/Pods-promiseTests/Pods-promiseTests.debug.xcconfig"; sourceTree = "<group>"; };
 		CB08415239822382E5014CDD /* Pods-promise.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-promise.debug.xcconfig"; path = "Target Support Files/Pods-promise/Pods-promise.debug.xcconfig"; sourceTree = "<group>"; };
 		EBA45A47B25BDB297F365FFB /* Pods_promiseTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_promiseTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -139,7 +139,7 @@
 				962CAE902312A84A00DE8D90 /* promiseTests.swift */,
 				962CAE922312A84A00DE8D90 /* Info.plist */,
 				96A968E92312BFCF00445BBF /* groupTests.swift */,
-				96A968EB2312C00100445BBF /* variationTests.swift */,
+				96A968EB2312C00100445BBF /* transtionTests.swift */,
 			);
 			path = promiseTests;
 			sourceTree = "<group>";
@@ -337,7 +337,7 @@
 				96A968E82312BB9B00445BBF /* callbackTests.swift in Sources */,
 				962CAE912312A84A00DE8D90 /* promiseTests.swift in Sources */,
 				96A968EA2312BFCF00445BBF /* groupTests.swift in Sources */,
-				96A968EC2312C00100445BBF /* variationTests.swift in Sources */,
+				96A968EC2312C00100445BBF /* transtionTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

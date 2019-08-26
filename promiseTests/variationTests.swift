@@ -11,7 +11,7 @@ import PromiseKit
 @testable import promise
 
 // testing transition of promise 
-class variationTests: XCTestCase {
+class transtionTests: XCTestCase {
 
     func testTransition1() {
         let expectation = XCTestExpectation(description: "testing transition of promise type")
