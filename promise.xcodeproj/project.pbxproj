@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0CFC912F7B00C8D9B2EFEFF0 /* Pods_promiseTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBA45A47B25BDB297F365FFB /* Pods_promiseTests.framework */; };
 		51EFE06358BA6D26A5F43D77 /* Pods_promise.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2612E92E80AA2718CDA3687A /* Pods_promise.framework */; };
+		9619237F23153649005A4F09 /* CallbackWithFlatmapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9619237E23153649005A4F09 /* CallbackWithFlatmapTests.swift */; };
 		962CAE7C2312A84600DE8D90 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962CAE7B2312A84600DE8D90 /* AppDelegate.swift */; };
 		962CAE7E2312A84600DE8D90 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962CAE7D2312A84600DE8D90 /* ViewController.swift */; };
 		962CAE812312A84600DE8D90 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 962CAE7F2312A84600DE8D90 /* Main.storyboard */; };
@@ -40,6 +41,7 @@
 		2612E92E80AA2718CDA3687A /* Pods_promise.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_promise.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6912E5BF1D5DF43ED1E67A3E /* Pods-promiseTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-promiseTests.release.xcconfig"; path = "Target Support Files/Pods-promiseTests/Pods-promiseTests.release.xcconfig"; sourceTree = "<group>"; };
 		7E231A90AFB959D0F19E9717 /* Pods-promise.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-promise.release.xcconfig"; path = "Target Support Files/Pods-promise/Pods-promise.release.xcconfig"; sourceTree = "<group>"; };
+		9619237E23153649005A4F09 /* CallbackWithFlatmapTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallbackWithFlatmapTests.swift; sourceTree = "<group>"; };
 		962CAE782312A84600DE8D90 /* promise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = promise.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		962CAE7B2312A84600DE8D90 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		962CAE7D2312A84600DE8D90 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				966AABE323142C590091E1CF /* TransitionTests.swift */,
+				9619237E23153649005A4F09 /* CallbackWithFlatmapTests.swift */,
 				96A968E72312BB9B00445BBF /* CallbackTests.swift */,
 				962CAE902312A84A00DE8D90 /* PromiseTests.swift */,
 				962CAE922312A84A00DE8D90 /* Info.plist */,
@@ -363,6 +366,7 @@
 			files = (
 				966AABE723142CCC0091E1CF /* Constants.swift in Sources */,
 				96A968E82312BB9B00445BBF /* CallbackTests.swift in Sources */,
+				9619237F23153649005A4F09 /* CallbackWithFlatmapTests.swift in Sources */,
 				962CAE912312A84A00DE8D90 /* PromiseTests.swift in Sources */,
 				966AABE423142C590091E1CF /* TransitionTests.swift in Sources */,
 				96A968EA2312BFCF00445BBF /* GroupTests.swift in Sources */,

@@ -8,9 +8,12 @@
 
 import Foundation
 
-let sharedService = SampleService()
+let sharedService = SampleService.shared
 
-struct SampleService {
+class SampleService {
+    
+    static let shared = SampleService()
+    private init() {}
 
     func async_step1 (random: Bool, complete: @escaping (Result<Bool, Error>)-> Void) {
         print("async_step1")

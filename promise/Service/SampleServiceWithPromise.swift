@@ -9,10 +9,13 @@
 import Foundation
 import PromiseKit
 
-let sharedServiceWithPromise = SampleServiceWithPromise()
 let decisions = [true, false]
+let sharedServiceWithPromise = SampleServiceWithPromise.shared
 
-struct SampleServiceWithPromise {
+class SampleServiceWithPromise {
+
+    static let shared = SampleServiceWithPromise()
+    private init() {}
 
     func async_step1(random: Bool)-> Promise<Bool> {
         print("async_step1")

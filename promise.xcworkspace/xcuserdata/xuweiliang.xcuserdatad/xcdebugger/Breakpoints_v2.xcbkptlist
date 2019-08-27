@@ -9,13 +9,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "promiseTests/promiseTests.swift"
-            timestampString = "588525000.742484"
+            filePath = "promiseTests/PromiseTests.swift"
+            timestampString = "588594783.3977571"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "36"
             endingLineNumber = "36"
-            landmarkName = "testPromiseChaining()"
+            landmarkName = "testPromiseWithErr()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

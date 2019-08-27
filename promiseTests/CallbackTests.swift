@@ -14,6 +14,7 @@ class CallbackTests: XCTestCase {
     // closure version
     func testClosureNesting() {
         let expectation = XCTestExpectation(description: "success is expected")
+
         sharedService.async_step1(random: false) { _ in
             sharedService.async_step2(random: false) { _ in
                 sharedService.async_step3(random: false) { result in
